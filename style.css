@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     flex: auto;
     margin: 0 0;
-    /* padding: 0 15px; */
+    justify-content: center;
     font-family: 'Helvetica', 'Arial', sans-serif;
     color: #424242;
     font-size: 12pt;
@@ -23,6 +23,7 @@ header {
     width: 100%;
     max-width: 1600px;
     min-width: 1200px;
+    height: auto;
 }
 a.item {
     color: inherit; 
@@ -32,20 +33,33 @@ a.item {
     font-size: 30pt;
     font-weight:600;
 }
+.white {
+    color: white;
+}
+.titleMain {
+    font-size: 40pt;
+    font-weight:600;
+}
+.titleSecondary {
+    font-size: 26pt;
+}
 
 header, footer { 
     height: 20vh;
 }
-main { 
-    flex: 1;
-    display: flex;
-}
+
 .fas {
     padding-right: 10px;
 }
 .fa-facebook-square {
     color: #1287bf;
-    font-size: 1.5em;
+    font-size: 1.8em;
+}
+.fa-envelope {
+    font-size: 1.4em;  
+}
+.fa-mobile-alt {
+    font-size: 1.2em;
 }
 .fa-graduation-cap {
     color: #dd2a24;
@@ -99,6 +113,7 @@ main {
 }
 .containerNav > a.item {
     margin: 0 1.1%;
+    white-space: nowrap;
     font-weight:600;
     display: list-item;          /* This has to be "list-item"                                               */
     list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
@@ -142,3 +157,71 @@ div > p.item {
     text-decoration: none;
     color: white !important;
 }
+
+main { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1600px;
+    margin: auto;
+    flex: auto;
+    box-sizing: border-box;
+    height: -webkit-fill-available;
+}
+
+.bigImg {
+    background: url("/images/Layer 32.jpg") no-repeat;
+    background-position: center bottom;
+    /* background-size: 100% auto; */
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    max-height: 777px;
+    min-height: 50%;
+    flex-grow:30;
+    flex-shrink: 1;
+}
+/* classes for vertical center alignment */
+.before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+.inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+.yellowBtn {
+    background-color:#f8cd53;
+    font-size: 20pt;
+    font-weight: 600;
+    margin-top: 6%;
+    padding:22px 45px;
+}
+.upperItem {
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;     /*Центрирование по вертикали */
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+.aboutUs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 1em;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    flex-shrink: 2;
+  }
+
+/* .columnParent {
+    display: flex;
+    padding: 1em;
+  } */
+/* .columns {
+    padding: 5%;
+} */
